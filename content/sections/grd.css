@@ -1,0 +1,25 @@
+.grid-container {
+    display: grid;
+    background-color: grey;
+    border-color: black;
+    border-width: 5px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 15px;
+    gap: 20px;
+  }
+  
+  @media (min-width: 500px) {
+    .grid-container {
+      display: grid;
+     grid-template-columns: repeat(2, 1fr);
+    }
+    }
+  
+  .grid-item {
+    background-color: #cac5c5;
+    border-color: black;
+    border-width: 5px;
+    padding: 100px;
+    border: 5ch;
+  }
+  

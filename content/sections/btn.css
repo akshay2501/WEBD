@@ -1,0 +1,88 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgb(147, 146, 146);
+}
+.dd{
+    position: relative;
+    width: 400px;
+    height: 50px;
+    margin-left: 10vh;
+}
+.dd::before
+{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border: 2px solid #3a3a3a;
+    right:  235px;
+    top: 15px;
+    z-index: 10000;
+    border-top: 2px solid rgb(234, 232, 232); 
+    border-right: 2px solid rgb(234, 232, 232);
+    transform: rotate(-45deg);
+    transition: 0.5s;
+    pointer-events: none;
+}
+.dd.active::before
+{
+    top: 22px;
+    transform:  rotate(-225deg);
+}
+.dd input
+{
+    position: absolute;
+    cursor: pointer;
+    width: 22vh;
+    height: 5vh;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background-color: rgb(234, 232, 232);
+    padding: 10px 5px;
+}
+.dd .Opt
+{
+    position: absolute;
+    top: 40px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 20px 20px rgb(200, 200, 200);
+    cursor: pointer;
+    /* display: none; */
+}
+.dd .active .Opt
+{
+    display:block;
+
+}
+.dd .Opt .elm
+{
+    padding-left: 15px;
+    padding-right: 11vh;
+}
+.dd .Opt div
+{
+    padding: 10px 50px;
+    cursor: pointer;
+}
+.dd .Opt div:hover
+{
+    background-color: rgb(155, 155, 254);
+}
+img{
+    height: 300px;
+    width: 600px;
+    margin-top: -30vh;
+    padding-left: 50vh;
+}
